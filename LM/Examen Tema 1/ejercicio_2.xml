@@ -1,0 +1,16 @@
+<!--Ejemplo de código-->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ejercicio_2>
+<documento>
+    <titulo nivel=1>Lenguaje de Marcas</titulo>
+    <subtitulo nivel=2>Lenguaje de Marcas</subtitulo>
+    <parrafo>Mi Primer <destacar importancia=1>documento
+    XML</destacar></parrafo>
+    <parrafo>Comienza con la <clave>etiqueta elegida</clave></parrafo> 
+    <parrafo>A continuación colocamos un elemento sin contenido</párrafo>
+    <imagen fichero ="imagen.gif"> </imagen>
+</documento>
+<!--Fin de ejemplo de código-->
+
+<!---Explicación: En el subtitulo he cambiado la etiqueta nivel2 ya que estaba mal expresada, lo correcto era poner "=" no como ponia en el ejercicio ":" luego a las etiquetas de parrafo, imagen, titulo y sibtitulo les falatba la tabulacion ya que se encuentran dentro de la etiqueta documento. Tambien la etiqueta parrafo estaba mal cerrada ya que tenia "] en vez de ">" que es lo correcto,tambien la etiqueta clave estaba mal ya que estaba detras de la etiqueta parrafo y deberia de cerrarse esa antes ya que se encuentra dentro de la etiquerta parrafo y por ultimo a la etiqueta imagen le faltba la etiqueta de cierre "</imagen>"-->
+

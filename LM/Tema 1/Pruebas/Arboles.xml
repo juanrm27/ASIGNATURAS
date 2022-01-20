@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Arboles>
+
+<Arboles>
+   <Nombre>
+      <NombreComun>Arce de Montpellier, Arce menor</NombreComun>
+      <Vegetacion>Caducifolio </Vegetacion>
+      <Altura>De 6 a 10 metros </Altura>
+      <Forma>Copa esférica</Forma>
+      <Estructura>Tronco principal recto con bifurcaciones. 
+      Ramaje colgante </Estructura>
+      <Color>Haz verde brillante, envés verde blanquecino </Color>
+      <Resistencia>Heladas fuertes (hasta -15ºC) </Resistencia>
+   </Nombre>
+</Arboles>

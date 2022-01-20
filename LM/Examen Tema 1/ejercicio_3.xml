@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ciudades>
+   <ciudad>
+        <informacion>
+            <nombre>sevilla</nombre>
+            <comunidad_autonoma>Andalucia</comunidad_autonoma>
+            <gentilicio>Sevillano</gentilicio>
+        </informacion>
+        <monumentos>
+            <monumento1>
+                <nombre>Catedral de Sevilla</nombre>
+                <siglo> siglo XVII</siglo>
+            </monumento1>
+            <monumento2>
+                <nombre>Giralda</nombre>
+                <siglo>siglo XVI</siglo>
+            </monumento2>
+        </monumentos>
+   </ciudad>
+   <ciudad>
+        <informacion>
+            <nombre>Bilbao</nombre>
+            <comunidad_autonoma>Pais Vasco</comunidad_autonoma>
+            <gentilicio>bilbaíno</gentilicio>
+        </informacion>
+        <monumentos>
+            <monumento1>
+                <nombre></nombre>
+                <siglo> </siglo>
+            </monumento1>
+            <monumento2>
+                <nombre></nombre>
+                <siglo></siglo>
+            </monumento2>
+        </monumentos>
+   
+</ciudades>
