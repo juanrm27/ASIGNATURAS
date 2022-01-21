@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<rss version="2.0">  <!--Etiqueta obligatòria que contiene la versión-->
+<channel><!--Sólo puede haber una etiqueta channel-->
+    <title>Crea tu sitio web</title>
+    <link>https://misentradasymispaginas.wordpress.com</link>
+    <description>Aprende a crear tu propia pagina web</description>
+    <language>es-ES</language>
+    <item>
+        <title>La clase del miércoles</title>
+        <link>https://misentradasymispaginas.wordpress.com/2021/04/28/la-clase-del-miercoles/</link>
+        <description>No por mucho madrugar amanece más temprano dormilón.</description>
+    </item>
+</channel></rss>
