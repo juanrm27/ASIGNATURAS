@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Listas y pseudoclases</title>
+    <style type="text/css">
+        /* Escribir aquí los selectores y propiedades necesarias */
+        li:first-child {
+            font-size:120%;
+            color:blue; 
+        }
+        li:last-child {
+            font-size:170%;
+            color:red; 
+        }
+        li:nth-of-type(2) {
+            list-style-position: inside;
+            list-style-type:circle; 
+        }
+        li:nth-of-type(odd) {
+            list-style-image: url(vistobueno.png); 
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>Primero</li>
+        <li>Segundo</li>
+        <li>Tercero</li>
+        <li>Cuarto</li>
+        <li>Quinto</li>
+    </ul>
+</body>
+</html>
