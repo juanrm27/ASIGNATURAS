@@ -1,9 +1,14 @@
+import csv
+
 """
 Máquina expendedora
 """
 MONEDA = 'Euro_1'
 BOLA = 'Bola entregada'
 CAPACIDAD = 100 # Nº de bolas que caben en el depósito
+ruta = '/home/juanrm27/ASIGNATURAS/makinabolas-main/'
+DATOS = ''
+
 
 class MakinaBolas():
     """ Clase que representa la máquina"""
@@ -30,4 +35,21 @@ class MakinaBolas():
         """
         self.deposito -= 1
         self.monedero += 1
+        self.guardar_estado()
         return BOLA
+    
+    def guardar_estado(self):
+        """ guardar el estado en el que se encuentra la 
+            maquina
+        """
+        with open(ruta + 'estado_maquina.csv', 'w') as archivo:
+            DATOS =f'{self.deposito}, {self.monedero}'
+            archivo.write(DATOS)
+
+    def leer_estado(self):
+        """ Leer el estado en el que se encuentra la 
+            maquina para luego guardar los datos+
+        """
+        with open(ruta + 'estado_maquina.csv', 'r') as archivo:
+            x = archivo.read()
+            print(x)
