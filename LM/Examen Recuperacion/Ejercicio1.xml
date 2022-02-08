@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE texto>
+<bibliografía>
+    <titulo>“Los videojuegos. La cultura del siglo XX”</titulo>
+    <libros>
+        <libro1>
+            <titulo>“Cine y Vídeojuegos.Un diálogo transversal”</titulo>
+            <autor>José María Villalobos</autor>
+            <edicion>Ediciones Arcade</edicion>
+        </libro1>
+        <libro2>
+            <titulo>“Ready Player One”</titulo>
+            <autor>Ernest Cline</autor>
+            <edicion>Editorial Nova.</edicion>
+        </libro2>
+    </libros>
+</bibliografía>
+

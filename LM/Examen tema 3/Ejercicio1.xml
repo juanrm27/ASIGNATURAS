@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">      <!--le añadimos las comillas ("") para que sea valido -->
+<channel>
+    <title>Diario de Sevilla - Home</title>
+    <link>https://www.diariodesevilla.es/</link> <!--Ponemos la etiqueta de cierra link y corregimos la etiqueta de apertura-->
+    <description>Diario de Sevilla - Home</description>
+    <language>es-ES</language>   <!--Corregimos la etiqueta lenguaje poniendola correctamente (language)-->
+    <item>
+        <title>Coronavirus Sevilla: Los contagios bajan del millar pero repuntan los hospitalizados</title>
+        <link>https://www.diariodesevilla.es/sevilla/coronavirus-sevilla-18-enero-2022_0_1648636337.html </link>
+        <description> Avance informativo.Los hospitales alcanzan su cifra de ingresos más alta de la sexta ola con 415 pacientes</description>   <!--colocamos bien la etiqueta description-->
+    </item>    <!--Borramos la etiqueta item que sobra-->
+</channel>
+</rss>

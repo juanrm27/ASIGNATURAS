@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<HTML><HEAD>
+
+<form action="datos personales" method="get">
+	<p>Nombre: <input type="text" name="nombre" size="40"></p>
+	<p>Apellido: <input type="text" name="apellido" size="40"></p>
+	<p>Sexo:
+	  <input type="radio" name="hm" value="h"> Hombre
+	  <input type="radio" name="hm" value="m"> Mujer
+	</p>
+	<p>Correo: <input type="text" name="correo" size="60"></p>
+	<p>
+		<label for="Población">Población: </label>
+		<select id="Población"> 
+			<option value="SEV">Sevilla</option>
+			<option value="MAD">Madrid</option>
+			<option value="BCN">Barcelona</option>
+			<option value="VAL">Valencia</option>
+		</select>
+	</p>
+	<p>
+		<label for="Descripción">Descripción:</label>
+    	<textarea id="Descripción" name="Descripción"></textarea>
+	</p>
+	<p>
+		<input type="checkbox" id="opcion1"
+		value="opcion1" checked name="opcion1"><label for="opcion1">Deseo recicibir informacion sobre novedades y ofertas</label>
+	</p>
+	<p>
+		<input type="checkbox" id="opcion2"
+		value="opcion2" checked name="opcion2"><label for="opcion2">Declaro haber leido y aceptarlas condiciones generales del programa y la normativa sobre proteccion de datos</label>
+	</p>
+	<p>
+	  <input type="submit" value="Enviar">
+	</p>
+</form>
