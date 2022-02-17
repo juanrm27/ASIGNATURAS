@@ -4,8 +4,8 @@
     <!ELEMENT titulo (#PCDATA)>
     <!ELEMENT autor (#PCDATA)>
     <!ELEMENT foto_portada (#PCDATA)>
-        <!ATTLIST foto imagen ENTITY #IMPLIED>
     <!ELEMENT editorial (#PCDATA)>
     <!ELEMENT edicion (#PCDATA)>
     <!ELEMENT ISBN (#PCDATA)>
     <!ELEMENT ubicacion (#PCDATA)>
+        <!ATTLIST ubicacion sede (norte|sur|centro) #REQUIRED>
