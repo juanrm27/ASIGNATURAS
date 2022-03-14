@@ -1,17 +1,17 @@
 class Persona():
 
-    def __init__(self,nombre="",edad=0,dni=""):
-        self.nombre=nombre
-        self.edad=edad
-        self.dni=dni
+    def __init__(self,nombre = " ", apellido = " ", dni = " "):
+        self.nombre = nombre
+        self.apellido = apellido
+        self.dni = dni
     
     @property
     def nombre(self):
         return self.__nombre
 
     @property
-    def edad(self):
-        return self.__edad
+    def apellido(self):
+        return self.__apellido
 
     @property
     def dni(self):
@@ -21,34 +21,15 @@ class Persona():
     def nombre(self,nombre):
         self.__nombre=nombre
 
-    def validar_dni(self):
-        letras = "TRWAGMYFPDXBNJZSQVHLCKE"
-        if len(self.__dni)!=9:
-            print("DNI incorrecto")
-            self.__dni = ""
-        else:
-            letra = self.__dni[8]
-            num = int(self.__dni[:8])
-            if letra.upper() != letras[num % 23]:
-                print("DNI incorrecto")
-                self.__dni = ""
-
+    
     @dni.setter
     def dni(self,dni):
-        self.__dni=dni
-        self.validar_dni()
+        self.__dni = dni
       
-    @edad.setter
-    def edad(self,edad):
-        if edad < 0:
-            print("Edad incorrecta")
-            self.__edad=0
-        else:
-            self.__edad=edad
+    @apellido.setter
+    def apellido(self,apellido):
+        self.__apellido = apellido
     
     
-    def mostrar(self):
-        return "Nombre:"+self.nombre+" - Edad:"+str(self.edad)+" - DNI:"+self.dni
-
-    def esMayorDeEdad(self):
-        return self.edad>=18
+    def __str__(self):
+        return (f'Nombre:  {self.__nombre}, Apellido: {self.__apellido}, DNI: {self.__dni}')
