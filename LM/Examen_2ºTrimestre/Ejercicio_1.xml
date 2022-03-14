@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE viajes [
+   <!ELEMENT viajes (españa, francia, italia)>
+   <!ELEMENT españa (ciudad+)>
+   <!ELEMENT francia (ciudad+)>
+   <!ELEMENT italia (ciudad+)>
+   <!ELEMENT ciudad (#PCDATA)>
+]>
+<viajes>   
+    <españa>
+        <ciudad>Santander</ciudad>
+    </españa>
+    <!-- Añadimos la etiqueta ciudad dentro de la etiqueta España para que el documento sea valido-->
+ 	<francia>
+        <ciudad>París</ciudad>
+        <ciudad>Lyon</ciudad>
+        <ciudad>Toulouse</ciudad>
+    </francia>
+    <!-- Añadimos 3 etiquetas de ciudad ya que hay 3 ciudades dentro de la etiqueta Francia y asi el documento es valido-->
+    <italia>
+        <ciudad></ciudad>
+    </italia>
+    <!-- Añadimos la etiqueta ciudad aunque no tengo ningun elemento para que el documento siga con la misma estructrura y asi seas valido-->
+</viajes>

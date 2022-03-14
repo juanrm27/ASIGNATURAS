@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE lunas [
+   <!ELEMENT lunas (luna)*>  <!-- Faltaba por declarar el elemento lunas-->
+   <!ELEMENT luna EMPTY>
+      <!ATTLIST luna numero ID #REQUIRED>
+      <!ATTLIST luna nivel CDATA #REQUIRED>  <!-- Declaramos el elemento nivel como CDATA ya que solo puede haber uno como ID en este caso el elemento numero-->
+      <!ATTLIST luna planeta CDATA #IMPLIED> <!-- El elemento planeta tambien lo declaramos como CDATA-->
+]>
+<lunas>
+   <luna numero="N234" nivel="H1"/>
+   <luna numero="N479" nivel="H2" planeta="Saturno"/>
+   <luna numero="N566" nivel="H2" planeta="Saturno"/>
+   <luna numero="N607" nivel="H3" planeta="Urano"/>
+</lunas>

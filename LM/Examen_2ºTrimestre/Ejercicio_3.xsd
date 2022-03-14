@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>  <!-- Esta línea indica al programa que recibe un archivo de datos en XML-->
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> <!-- Es un elemento raíz del documento XSD que se utiliza para controlar el uso de espacios de nombres en documentos de instancia XML -->
+
+  <xs:element name="biblioteca"> <!-- El elemento name especifica el nombre de esta biblioteca y es el primer elemento (El elemento Raiz) del documento xml a tratar-->
+
+    <xs:complexType> <!-- El elemento complexType define un tipo complejo.-->
+
+      <xs:sequence> <!-- Indica que los elementos secundarios solo aparecen en el orden mencionado.-->
+
+        <xs:element ref="libro" minOccurs="2" maxOccurs="unbounded"/> <!-- Atributo que indica que el elemento puede aparecer varias veces.Si especificamos maxOccurs=”unbounded”, el elemento puede aparecer un número indefinido de veces, pero minimo 2 y ref indica que se definira mas adelante, fuera del bloque principal-->
+
+      </xs:sequence> <!-- Cierra la secuencia-->
+
+    </xs:complexType> <!-- Cierra el elemento complejo.-->
+
+  </xs:element> <!-- Cierra la etiqueta del elemento.-->
+
+  <xs:element name="libro"> <!--  Empieza la definición del elemento name.-->
+
+    <xs:complexType> <!-- El elemento complexType define un tipo complejo.-->
+
+      <xs:sequence> <!-- Indica que los elementos secundarios solo aparecen en el orden mencionado.-->
+
+        <xs:element name="fecha" type="xs:date"/> <!--Define el elemento fecha y es de tipo dato -->
+
+        <xs:element name="autor" type="xs:string"  maxOccurs="2"/> <!-- Define el elemento autor, pudiendo aparecer el elemento entre 1 y 2 veces y es de tipo texto.-->
+
+        <xs:element name="editorial" type="tipoEditorial" /> <!-- Define el elemento editorial y es de tipo editorial-->
+
+        <xs:element name="isbn" type="tipoISBN"/> <!-- Define el elemento isbn y es de tipo ISBN-->
+
+        <xs:element name="donacion" type="xs:string" minOccurs="0" maxOccurs="1"/> <!-- Define el elemento donacion, pudiendo aparecer o no y es de tipo texto.-->
+
+        <xs:element name="ubicacion" type="tipoUbicacion"/> <!-- Define el elemento ubicación y es de tipo Ubicacion-->
+
+        <xs:element ref="caracteristicas"/> <!-- Indica que la referencia caracteristicas del elemento se encuentra en otro lugar del esquema y no puede aparacer junto con name.-->
+
+      </xs:sequence> <!-- Cierra la secuencia-->
+
+      <xs:attribute name="codigo" type="tipoCodigo" use="required"/> <!-- Define el atributo codigo y es de tipo texto y tiene uso obligatorio(required)-->
+
+      <xs:attribute name="titulo" type="xs:string" use="required"/> <!-- Define el atributo titulo y es de tipo texto y tiene uso obligatorio(required)-->
+
+    </xs:complexType> <!-- Cierra el elemento complejo.-->
+
+  </xs:element> <!-- Cierra la etiqueta del elemento.-->
+
+<xs:simpleType name="tipoEditorial"> <!-- Define el tipo personalizado tipoEditoral e indica que el atributo es de tipo simple. -->
+
+  <xs:restriction base="xs:string"> <!-- Indica la estructura y las restricciones de los contenidos de los documentos XML de una forma muy precisa-->
+
+         <xs:enumeration value="Libros del KO"/> <!-- Indica que la restricción es de carácter enumerado, indicando "Libros del KO"-->
+
+         <xs:enumeration value="Flores Raras"/> <!-- Lo mismo que en lo anterior pero en este caso indica que es "Flores Raras".-->
+
+      </xs:restriction> <!-- Cierra la declaración de la restricción.-->
+
+</xs:simpleType> <!-- Cierra la definición del tipo simple.-->
+
+<xs:simpleType name="tipoISBN"> <!-- Define el tipo personalizado tipoISBN e indica que el atributo es de tipo simple. -->
+
+  <xs:restriction base="xs:string"> <!-- Indica la estructura y las restricciones de los contenidos de los documentos XML de una forma muy precisa-->
+
+         <xs:pattern value="([a-z])*"/> <!-- define que el único valor aceptable es una de las letras minusculas entre la A a la Z-->
+
+      </xs:restriction> <!-- Cierra la declaración de la restricción.-->
+
+</xs:simpleType> <!-- Cierra la definición del tipo simple.-->
+
+    <xs:complexType name="tipoUbicacion"> <!-- Define el tipo personalizado tipoUbicacion y es de tipo no simple ya que contiene un atributo.-->
+
+      <xs:attribute name="sede" use="required"> <!-- Define el  atributo sede y es de tipo simple-->
+
+      <xs:simpleType> <!-- Indica que el atributo es de tipo simple.-->
+
+      <xs:restriction base="xs:string"> <!-- Indica que el atributo es de tipo simple.-->
+
+         <xs:enumeration value="este"/> <!-- Indica que la restricción es de carácter enumerado, en este caso este-->
+
+         <xs:enumeration value="oeste"/> <!-- Lo mismo que en lo anterior pero en este caso indica que es sur.-->
+
+      </xs:restriction> <!-- Cierra la declaración de la restricción.-->
+
+      </xs:simpleType> <!-- Cierra la definición del tipo simple.-->
+
+      </xs:attribute> <!-- Cierra la definición del atributo.-->
+
+    </xs:complexType> <!-- Cierra la definición del tipo personalizado.-->
+
+<xs:simpleType name="tipoCodigo"> <!-- Define el tipo personalizado tipoCodigo e indica que el atributo es de tipo simple. -->
+
+  <xs:restriction base="xs:ID"> <!-- Indica que el atributo es de tipo ID.-->
+
+          <xs:length value="8"/> <!-- Define que el valor debe ser exactamente de ocho caracteres-->
+
+      </xs:restriction> <!-- Cierra la declaración de la restricción.-->
+
+</xs:simpleType> <!-- Cierra la definición del tipo simple.-->
+
+<xs:element name="caracteristicas"> <!-- Define el elemento caracteristicas-->
+
+  <xs:complexType> <!-- El elemento complexType define un tipo complejo.-->
+
+  <xs:sequence> <!-- Indica que los elementos secundarios solo aparecen en el orden mencionado.-->
+
+    <xs:element name="numpaginas" type="tipoNumpaginas"/>  <!-- Define el elemento numpaginas y es de tipo Numpaginas-->
+
+    <xs:element name="calidad" type="tipoCalidad"/>  <!-- Define el elemento calidad y es de tipo Calidad-->
+
+  </xs:sequence> <!-- Cierra la secuencia-->
+
+  </xs:complexType> <!-- Cierra la definición del tipo personalizado.-->
+
+</xs:element> <!-- Cierra la etiqueta del elemento.-->
+
+</xs:schema> <!-- Cierra el archivo XSD-->
